@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-## 🛠 What it does
+
+##  What it does
 
 * **Cloud-Synced Goals:** The main task list is hooked up to **MongoDB**, so your to-dos actually stay saved when you close the tab.
 * **Scratchpads for your Brain:**
@@ -8,7 +8,7 @@
     * **Reminders:** A little block for quotes or things you can't afford to forget.
 * **Design that doesn't hurt your eyes:** I spent a lot of time on the UI. It uses a mix of *Playfair Display* and *Montserrat* fonts to look clean, and the background has these slow-moving "Aurora" blobs to keep it from feeling static.
 
-## 💻 The Tech Part
+##  The Tech Part
 
 I kept the stack simple but effective:
 * **Frontend:** Plain HTML, CSS, and JS. No heavy frameworks—just clean, fast code.
@@ -16,7 +16,7 @@ I kept the stack simple but effective:
 * **Database:** MongoDB Atlas. Everything—including your notes—is stored here.
 * **Smart Saving:** I added a "debounce" feature. This means the app waits until you stop typing for a second before it saves to the database, so it doesn't lag or spam the server.
 
-## 🚀 How to run it
+##  How to run it
 
 ### 1. What you need
 * **Node.js** installed on your machine.
@@ -25,7 +25,7 @@ I kept the stack simple but effective:
 ### 2. Set it up
 ```bash
 # Clone it
-git clone https://github.com/yourusername/focus-and-flow.git
+git clone https://github.com/yAryankaR-hub/Todo-list.git
 cd focus-and-flow
 
 # Install the stuff it needs
