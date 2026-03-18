@@ -1,0 +1,237 @@
+:root {
+    /* Refined Color Palette - Your custom colors kept */
+    --creamy-bg: #c9bfdd; 
+    --pink-gradient: linear-gradient(135deg, #8faec2 0%, #ffdfdf 100%);
+    --teal-gradient: linear-gradient(135deg, #5a8e93 0%, #c4e4e1 100%);
+    --beige-gradient: linear-gradient(135deg, #7975cf 0%, #f7ebd1 100%);
+    --dark-slate: rgb(162, 183, 225);
+    
+    /* NEW: Sophisticated Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--creamy-bg);
+    /* Subtle dot grid pattern */
+    background-image: radial-gradient(#d0b084 0.5px, transparent 0.5px), radial-gradient(#eadfd0 0.5px, var(--creamy-bg) 0.5px);
+    background-size: 20px 20px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: #2d3436;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 60px 20px;
+    line-height: 1.6;
+}
+
+.planner-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+}
+
+/* --- TITLE & DECOR --- */
+.main-title {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 4rem;
+    text-align: center;
+    color: #210636;
+    margin-bottom: 50px;
+    letter-spacing: -1px;
+}
+
+.hanging-decor {
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.photo {
+    width: 45px;
+    height: 55px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: rotate(-3deg);
+    font-size: 1.2rem;
+}
+
+/* --- GRID LAYOUT --- */
+.planner-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    color: #2d2929;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 10px;
+}
+
+/* --- MAIN TODO --- */
+.todo-card {
+    background: var(--pink-gradient);
+    min-height: 550px;
+}
+
+.input-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    transition: all 0.3s;
+}
+
+#taskInput:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(143, 174, 194, 0.3);
+}
+
+.add-btn {
+    background: #6d5c7e;
+    color: white;
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-btn:hover { background: #5a4b69; transform: scale(1.05); }
+
+/* --- RIGHT COLUMN --- */
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.notes-card { background: var(--teal-gradient); }
+
+.washi-tape {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 28px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px dashed rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+
+#notesArea {
+    width: 100%;
+    height: 160px;
+    background: transparent;
+    border: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    line-height: 1.7;
+    color: #333;
+}
+
+.focus-card { background: var(--beige-gradient); }
+
+.focus-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0,0,0,0.03);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 12px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.remember-card {
+    background-color: var(--dark-slate);
+    color: #1a3a5f;
+}
+
+.remember-card h2 { color: #1a3a5f; }
+
+.lightbulb-icon {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    font-size: 1.8rem;
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+}
+
+.remember-content {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.3rem;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Task List Styling */
+#taskList li {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}

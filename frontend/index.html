@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus & Flow | Personal Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="planner-wrapper">
+        <div class="hanging-decor">
+            <div class="photo">🌸</div>
+            <div class="photo">✨</div>
+            <div class="photo">🌱</div>
+        </div>
+
+        <h1 class="main-title">Focus & Flow</h1>
+
+        <div class="planner-grid">
+            <section class="card todo-card">
+                <h2>Daily Goals</h2>
+                <div class="input-row">
+                    <input type="text" id="taskInput" placeholder="Add a new goal...">
+                    <input type="date" id="dateInput">
+                    <button onclick="addTask()" class="add-btn">+</button>
+                </div>
+                <ul id="taskList"></ul>
+            </section>
+
+            <div class="side-column">
+                <section class="card notes-card">
+                    <div class="washi-tape"></div>
+                    <h2>Notes</h2>
+                    <textarea id="notesArea" placeholder="Write your thoughts..."></textarea>
+                </section>
+
+                <section class="card focus-card">
+                    <h2>Daily Focus</h2>
+                    <div class="focus-points">
+                        <input type="text" class="focus-input" placeholder="Point 1...">
+                        <input type="text" class="focus-input" placeholder="Point 2...">
+                        <input type="text" class="focus-input" placeholder="Point 3...">
+                    </div>
+                </section>
+
+                <section class="card remember-card">
+                    <div class="lightbulb-icon">💡</div>
+                    <h2>Remember</h2>
+                    <div class="remember-content">
+                        <p>Don't let yesterday take up too much of today.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
