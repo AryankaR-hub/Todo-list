@@ -1,4 +1,4 @@
-
+#To-do list
 ##  What it does
 
 * **Cloud-Synced Goals:** The main task list is hooked up to **MongoDB**, so your to-dos actually stay saved when you close the tab.
@@ -63,7 +63,3 @@ Then just open `index.html` in your browser.
 * **Honesty:** It admits to changing the design (moving from LocalStorage to Cloud) which shows you were thinking like an engineer during the process.
 * **Formatting:** It's clean but looks like a developer wrote it in a Markdown editor, not like a marketing brochure.
 
-**Is there anything else you want to tweak, or does this feel more like "you"?**
-=======
-# Todo-list
->>>>>>> 49be5fc8bec766355e3ef33d98d9544e051fa495
