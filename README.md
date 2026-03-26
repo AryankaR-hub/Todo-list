@@ -1,4 +1,4 @@
-#To-do list
+# To-do list
 ##  What it does
 
 * **Cloud-Synced Goals:** The main task list is hooked up to **MongoDB**, so your to-dos actually stay saved when you close the tab.
