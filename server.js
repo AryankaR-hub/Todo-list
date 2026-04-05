@@ -7,6 +7,16 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+const path = require("path");
+
+// Serve static files from the root folder (where index.html is)
+app.use(express.static(path.join(__dirname)));
+
+// Optional: handle "/" to serve index.html explicitly
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "index.html"));
+});
+
 // --- DATABASE SCHEMA ---
 const itemSchema = new mongoose.Schema({
   content: { type: String, required: true },
