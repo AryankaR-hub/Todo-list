@@ -1,20 +1,19 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-require("dotenv").config(); // optional: for local development
+const path = require("path");
+require("dotenv").config(); // loads .env locally, optional on Render
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-const path = require("path");
+// --- Serve frontend ---
+app.use(express.static(path.join(__dirname, "frontend")));
 
-// Serve static files from the root folder (where index.html is)
-app.use(express.static(path.join(__dirname)));
-
-// Optional: handle "/" to serve index.html explicitly
+// Fallback route to serve index.html for SPA
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "frontend", "index.html"));
 });
 
 // --- DATABASE SCHEMA ---
@@ -29,7 +28,7 @@ const Item = mongoose.model("Item", itemSchema);
 // --- DB CONNECTION ---
 const mongoUri = process.env.MONGO_URI;
 if (!mongoUri) {
-  console.error("❌ MONGO_URI is not set! Set it in Render Environment Variables.");
+  console.error("❌ MONGO_URI is not set! Add it in Render Environment Variables.");
   process.exit(1);
 }
 
